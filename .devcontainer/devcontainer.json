@@ -1,8 +1,15 @@
 {
   "name": "code-runner",
-  "build": { "dockerfile": "Dockerfile" },
-  "capAdd": ["SYS_PTRACE"],
-  "securityOpt": ["seccomp=unconfined"],
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "capAdd": [
+    "SYS_PTRACE"
+  ],
+  "securityOpt": [
+    "seccomp=unconfined"
+  ],
+  "shutdownAction": "stopContainer",
   "customizations": {
     "vscode": {
       "extensions": [
